@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+
+    <application
+        android:name=".util.MyApp"
+        android:allowBackup="false"
+        android:networkSecurityConfig="@xml/network_security"
+        android:usesCleartextTraffic="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FINDINGLOCATION"
+        tools:targetApi="31">
+
+        <activity
+            android:name=".ui.navigation.NavigationActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+        </activity>
+
+        <activity android:name=".ui.auth.LoginActivity" />
+        <activity android:name="com.inyonghengki.findinglocation.ui.auth.RegisterActivity" />
+        <activity android:name="com.inyonghengki.findinglocation.ui.updateprofile.UpdateProfileActivity" />
+        <activity android:name="com.inyonghengki.findinglocation.ui.tempat.InfoTempatActivity" />
+        <activity android:name="com.inyonghengki.findinglocation.ui.lokasitempat.ListLokasiTempatActivity" />
+        <activity android:name="com.inyonghengki.findinglocation.ui.tempat.setting.SettingTempatActivity" />
+        <activity android:name="com.inyonghengki.findinglocation.ui.lokasitempat.AddLokasiActivity" />
+        <activity android:name="com.inyonghengki.findinglocation.ui.lokasitempat.UpdateLokasiActivity" />
+        <activity android:name="com.inyonghengki.findinglocation.ui.menuproduct.ListMenuProductActivity" />
+        <activity android:name="com.inyonghengki.findinglocation.ui.menuproduct.AddMenuProductActivity" />
+        <activity android:name="com.inyonghengki.findinglocation.ui.menuproduct.UpdateMenuProductActivity" />
+        <activity android:name="com.inyonghengki.findinglocation.ui.menufasilitas.AddMenuFasilitasActivity" />
+        <activity android:name="com.inyonghengki.findinglocation.ui.menufasilitas.ListMenuFasilitasActivity" />
+        <activity android:name="com.inyonghengki.findinglocation.ui.menufasilitas.UpdateMenuFasilitasActivity" />
+        <activity android:name="com.inyonghengki.findinglocation.ui.tempat.UpdatePlaceActivity" />
+        <activity android:name="com.inyonghengki.findinglocation.ui.category.ListCategoryAdminActivity" />
+        <activity android:name="com.inyonghengki.findinglocation.ui.category.AddCategoryAdminActivity" />
+        <activity android:name="com.inyonghengki.findinglocation.ui.adminpanel.AdminPanel" />
+        <activity android:name="com.inyonghengki.findinglocation.ui.tempat.AddTempatActivity" />
+        <activity android:name="com.inyonghengki.findinglocation.ui.slider.ListSliderAdminActivity" />
+        <activity android:name="com.inyonghengki.findinglocation.ui.slider.AddSliderAdminActivity" />
+        <activity android:name="com.inyonghengki.findinglocation.ui.tempat.DetailTempatActivity" />
+        <activity android:name="com.inyonghengki.findinglocation.ui.tempat.QrCodeTempatActivity" />
+        <activity
+            android:name="com.inyonghengki.findinglocation.ui.akuns.setting.scanqrcode.ScanQrCodeActivity"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+        <activity android:name="com.inyonghengki.findinglocation.ui.category.SelectCategoryActivity" />
+        <activity android:name="com.inyonghengki.findinglocation.ui.detail.DetailOneTempatActivity" />
+        <activity android:name="com.inyonghengki.findinglocation.ui.detail.AddUlasanActivity" />
+        <activity android:name="com.inyonghengki.findinglocation.ui.review.UpdateUlasanActivity" />
+        <activity android:name="com.inyonghengki.findinglocation.ui.review.ListReviewMySelf" />
+        <activity android:name="com.inyonghengki.findinglocation.ui.review.ViewDataReviewPlaceActivity" />
+        <activity android:name="com.inyonghengki.findinglocation.ui.review.ListReviewPlaceMe" />
+        <activity android:name="com.inyonghengki.findinglocation.ui.searchplace.SearchActivity" />
+        <activity android:name="com.inyonghengki.findinglocation.ui.searchplace.ResultHasilActivity" />
+        <activity android:name="com.inyonghengki.findinglocation.ui.home.NewPlaceAllActivity" />
+        <activity android:name="com.inyonghengki.findinglocation.ui.adminpanel.tempat.ListPlaceForConfirmation" />
+        <activity android:name="com.inyonghengki.findinglocation.ui.adminpanel.tempat.CekTempatActivity" />
+        <activity android:name="com.inyonghengki.findinglocation.ui.tempat.MapsRute"/>
+        <activity android:name="com.inyonghengki.findinglocation.ui.keranjangproduct.KeranjangProductActivity" />
+        <activity android:name="com.inyonghengki.findinglocation.ui.feedback.TypesProductActivity" />
+        <activity android:name="com.inyonghengki.findinglocation.ui.tempat.ConfirmationBuyActivity" />
+        <activity android:name="com.inyonghengki.findinglocation.ui.tempat.TypesOrderByPlaceActivity" />
+        <activity android:name="com.inyonghengki.findinglocation.ui.categoryproduct.SelectCategoryProductActivity" />
+        <activity android:name="com.inyonghengki.findinglocation.ui.categoryproduct.ListCategoryProductAdminActivity" />
+        <activity android:name="com.inyonghengki.findinglocation.ui.categoryproduct.AddCategoryProductAdminActivity" />
+        <activity android:name="com.inyonghengki.findinglocation.ui.categoryfasilitas.AddCategoryFasilitasAdminActivity" />
+        <activity android:name="com.inyonghengki.findinglocation.ui.categoryfasilitas.ListCategoryFasilitasAdminActivity" />
+        <activity android:name="com.inyonghengki.findinglocation.ui.categoryfasilitas.SelectCategoryFasilitasActivity" />
+        <activity android:name="com.inyonghengki.findinglocation.ui.feedback.history.ListHistoryTransUserActivity" />
+        <activity android:name="com.inyonghengki.findinglocation.ui.feedback.history.TypesHistoryProductActivity" />
+        <activity android:name="com.inyonghengki.findinglocation.ui.tempat.ListHistoryTransPlaceActivity" />
+        <activity android:name="com.inyonghengki.findinglocation.ui.tempat.TypesHistoryProductByPlaceActivity" />
+
+    </application>
+
+</manifest>
